@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="250dp"
+    android:layout_centerInParent="true"
+    android:background="@drawable/dialog_bg">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:text="编辑内容"
+        android:textColor="#333"
+        android:textSize="16sp" />
+    <LinearLayout
+        android:id="@+id/li_add"
+        android:layout_below="@+id/tv_title"
+        android:layout_width="match_parent"
+
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="金额"
+            android:layout_marginLeft="15dp"
+            android:textColor="#666"
+            />
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:textColor="#666"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/li_bz"
+        android:layout_below="@+id/li_add"
+        android:layout_width="match_parent"
+        android:background="@drawable/pic_holder"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="80dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="备注"
+            android:layout_marginLeft="15dp"
+            android:textColor="#666"
+            android:gravity="top"
+            android:layout_gravity="top"
+            />
+        <EditText
+            android:id="@+id/et_content1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:gravity="top"
+            android:textColor="#666"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/linear"
+        android:layout_centerVertical="true"
+        android:background="#d8dbd5" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#FF8E3E" />
+
+        <TextView
+            android:id="@+id/btn_ensure"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#FF8E3E" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/linear"
+        android:layout_alignBottom="@+id/linear"
+        android:layout_centerHorizontal="true"
+        android:background="#d8dbd5" />
+
+</RelativeLayout>
