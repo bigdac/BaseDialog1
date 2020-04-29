@@ -6,7 +6,7 @@ import android.view.WindowManager;
 
 public class ScreenSizeUtils {
 
-    private static ScreenSizeUtils instance = null;
+    private static volatile ScreenSizeUtils instance = null;
     private int screenWidth, screenHeight;
 
     public static ScreenSizeUtils getInstance(Context mContext) {

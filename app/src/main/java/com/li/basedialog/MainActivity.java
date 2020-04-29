@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AlertDialog
+
         TextView tv_title = findViewById(R.id.tv_title);
         tv_title.setOnClickListener(v -> {
             BaseDialog baseDialog = new BaseDialog.Builder(this)

@@ -54,8 +54,6 @@ public class BaseDialogController {
     private final View.OnClickListener mButtonHandler = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-
-
             // Post a message so we dismiss after the above handlers are executed
             mHandler.obtainMessage(ButtonHandler.MSG_DISMISS_DIALOG, mBaseDialog)
                     .sendToTarget();

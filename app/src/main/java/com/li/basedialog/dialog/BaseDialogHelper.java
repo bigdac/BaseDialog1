@@ -16,7 +16,7 @@ import java.lang.ref.WeakReference;
  * 创建日期：2020/4/23 20
  * 描述：
  */
-public class BaseDialogHelper {
+    public class BaseDialogHelper {
 
     private View mContentView;
     private SparseArray<WeakReference<View>> mViews ;
