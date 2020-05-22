@@ -2,15 +2,12 @@ package com.li.basedialog;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.li.basedialog.dialog.BaseDialog;
+import com.li.mylibrary.dialog.BaseDialog;
 
 public class MainActivity extends AppCompatActivity {
 

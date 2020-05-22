@@ -1,4 +1,4 @@
-package com.li.basedialog.Utils;
+package com.li.mylibrary.Utils;
 
 import android.content.Context;
 import android.util.DisplayMetrics;

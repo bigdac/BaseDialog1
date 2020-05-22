@@ -1,4 +1,4 @@
-package com.li.basedialog.dialog;
+package com.li.mylibrary.dialog;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -12,8 +12,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.li.basedialog.R;
-import com.li.basedialog.Utils.ScreenSizeUtils;
+
+import com.li.mylibrary.R;
+import com.li.mylibrary.Utils.ScreenSizeUtils;
 
 import java.lang.ref.WeakReference;
 

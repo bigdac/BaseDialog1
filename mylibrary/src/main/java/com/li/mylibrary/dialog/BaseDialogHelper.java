@@ -1,4 +1,4 @@
-package com.li.basedialog.dialog;
+package com.li.mylibrary.dialog;
 
 import android.content.Context;
 import android.util.SparseArray;
@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
-import com.li.basedialog.R;
+
 
 import java.lang.ref.WeakReference;
 

@@ -1,4 +1,4 @@
-package com.li.basedialog.dialog;
+package com.li.mylibrary.dialog;
 
 import android.content.Context;
 import android.content.DialogInterface;
