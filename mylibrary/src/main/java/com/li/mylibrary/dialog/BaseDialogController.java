@@ -75,7 +75,9 @@ public class BaseDialogController {
         public View mView;
         public int mViewLayoutResId;
         public SparseArray<CharSequence> mTextArray = new SparseArray<>();
-        public SparseArray<View.OnClickListener> mClickListenerSparseArray = new SparseArray<>();
+//        public SparseArray<View.OnClickListener> mClickListenerSparseArray = new SparseArray<>();
+//        新增自定义的接口返回值有view和dialog
+        public SparseArray<DialogClickListener> mClickListenerSparseArray = new SparseArray<>();
         public SparseArray<Boolean> mCancelClickListener= new SparseArray<>();
         public int mWidth = ViewGroup.LayoutParams.WRAP_CONTENT;
         public int mHeight= ViewGroup.LayoutParams.WRAP_CONTENT;
@@ -91,7 +93,7 @@ public class BaseDialogController {
 
             BaseDialogHelper helper = null;
             if (mViewLayoutResId!=0){
-                helper = new BaseDialogHelper(mContext,mViewLayoutResId);
+                helper = new BaseDialogHelper(mContext,mViewLayoutResId,dialog.getBaseDialog());
             }
             if (mView!=null){
                 helper = new BaseDialogHelper();
@@ -109,9 +111,12 @@ public class BaseDialogController {
 
             for(int i=0;i<mClickListenerSparseArray.size();i++){
                 helper.setClickListener(mClickListenerSparseArray.keyAt(i),mClickListenerSparseArray.valueAt(i));
-                if (mCancelClickListener.valueAt(i))
-                helper.getView(mCancelClickListener.keyAt(i)).setOnClickListener(dialog.mButtonHandler);
             }
+            for(int i=0;i<mCancelClickListener.size();i++){
+                if (mCancelClickListener.valueAt(i))
+                    helper.getView(mCancelClickListener.keyAt(i)).setOnClickListener(dialog.mButtonHandler);
+            }
+
 
             Window window = dialog.getWindow();
             window.setGravity(mGravity);

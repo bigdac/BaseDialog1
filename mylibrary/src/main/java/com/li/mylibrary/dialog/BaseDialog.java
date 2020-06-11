@@ -81,13 +81,12 @@ public class BaseDialog extends Dialog {
         }
 
 
-        public Builder setClickListener(int viewId, View.OnClickListener onClickListener,boolean dismiss) {
+        public Builder setClickListener(int viewId, DialogClickListener onClickListener ) {
             P.mClickListenerSparseArray.put(viewId, onClickListener);
-            P.mCancelClickListener.put(viewId, dismiss);
             return this;
         }
-        public Builder setClickListener(int viewId, View.OnClickListener onClickListener) {
-            setClickListener(viewId,onClickListener,false);
+        public Builder setClickListener(int viewId, boolean dismiss) {
+            P.mCancelClickListener.put(viewId, dismiss);
             return this;
         }
         public Builder fullWidth() {

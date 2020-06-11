@@ -20,9 +20,11 @@ import java.lang.ref.WeakReference;
 
     private View mContentView;
     private SparseArray<WeakReference<View>> mViews ;
-    public BaseDialogHelper(Context mContext, int mViewLayoutResId) {
+    private BaseDialog mBaseDialog ;
+    public BaseDialogHelper(Context mContext, int mViewLayoutResId,BaseDialog baseDialog ) {
         this();
         mContentView = LayoutInflater.from(mContext).inflate(mViewLayoutResId,null);
+        this.mBaseDialog = baseDialog;
     }
 
     public BaseDialogHelper() {
@@ -40,10 +42,15 @@ import java.lang.ref.WeakReference;
 
     }
 
-    public void setClickListener(int keyAt, View.OnClickListener valueAt) {
+    public void setClickListener(int keyAt, final DialogClickListener valueAt) {
         View view = getView(keyAt);
         if (view!=null)
-            view.setOnClickListener(valueAt);
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    valueAt.onDialogClick(v,mBaseDialog);
+                }
+            });
     }
 
     public  <T extends View>T getView (int viewId){
